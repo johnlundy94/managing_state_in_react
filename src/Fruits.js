@@ -12,7 +12,9 @@ function Fruits({children}) {
 
     return (
         <FruitsContext.Provider value={{fruits}}>
-            {children}
+            <>
+                {children}
+            </>
         </FruitsContext.Provider>
     )
 }
@@ -20,3 +22,15 @@ function Fruits({children}) {
 export const useFruitsContext = () => React.useContext(FruitsContext)
 
 export default Fruits
+
+// props Fruits.js
+
+// function Fruits(props) {
+//     return (
+//         <div>
+//             {props.fruits.map(f => <p key={f.id}>{f.fruitName}</p>)}
+//         </div>
+//     )
+// }
+
+// export default Fruits
